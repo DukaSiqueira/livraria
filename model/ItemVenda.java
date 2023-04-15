@@ -67,4 +67,15 @@ public class ItemVenda {
     public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
     }
+
+    @Override
+    public toString() {
+        return "ItemVenda{" +
+                "id - " + id + "\n" +
+                "item - " + item + "\n" +
+                "quantidade Item - " + qtdItem + "\n" +
+                "valor Unitário - " + valorUn + "\n" +
+                "valor Unitário Desconto - " + valorUnDesconto + "\n" +
+                "valor Total - " + valorTotal + "\n" +;
+    }
 }

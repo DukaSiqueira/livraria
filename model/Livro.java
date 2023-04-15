@@ -90,4 +90,17 @@ public class Livro {
     public void setValorVenda(double valorVenda) {
         this.valorVenda = valorVenda;
     }
+
+    @Override
+    public toString() {
+        return "Livro: \n" +
+                "id - " + id + "\n" +
+                "titulo - " + titulo + "\n" +
+                "genero - " + genero + "\n" +
+                "editora - " + editora + "\n" +
+                "data Lançamento - " + dataLancamento + "\n" +
+                "número Páginas - " + nmrPaginas + "\n" +
+                "quantidade Estoque - " + qtdEstoque + "\n" +
+                "valor Venda - " + valorVenda + "\n" +;
+    }
 }

@@ -58,4 +58,14 @@ public class Venda {
     public void setCliente(Pessoa cliente) {
         this.cliente = cliente;
     }
+
+    @Override
+    public toString() {
+        return "Venda{" +
+                "id=" + id + "\n" +
+                ", totalVenda=" + totalVenda + "\n" +
+                ", itensVenda=" + itensVenda + "\n" +
+                ", formasPagamento=" + formasPagamento + "\n" +
+                ", cliente=" + cliente + "\n" +;
+    }
 }
