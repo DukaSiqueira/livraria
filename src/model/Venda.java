@@ -107,9 +107,9 @@ public class Venda {
     public String toString() {
         return "Venda - " +
                 " Total Venda: " + totalVenda + "\n" +
+                "Troco: " + troco + "\n" +
                 "Itens Venda: " + "\n" + itensVenda + "\n" +
                 "Formas Pagamento: " + formasPagamento + "\n" +
-                "Cliente: " + cliente + "\n" +
-                "Troco: " + troco;
+                "Cliente: " + cliente;
     }
 }

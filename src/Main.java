@@ -91,7 +91,7 @@ public class Main {
         FormaPagamento f2 = new FormaPagamento();
         f2.setId(2);
         f2.setTipoPagamento("Dinheiro");
-        f2.setValorPago(98);
+        f2.setValorPago(100);
 
         ArrayList<FormaPagamento> formasPagemento = new ArrayList<FormaPagamento>();
         formasPagemento.add(f1);
