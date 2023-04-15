@@ -1,7 +1,6 @@
 package model;
 
 import java.util.Date;
-import java.util.List;
 
 public class Livro {
 
@@ -9,7 +8,7 @@ public class Livro {
     private String titulo;
     private String genero;
     private String editora;
-    private String autor;
+    private Pessoa autor;
     private String dataLancamento;
     private int nmrPaginas;
     private int qtdEstoque;
@@ -17,7 +16,8 @@ public class Livro {
 
     public Livro() {}
 
-    public Livro(int id, String titulo, String genero, String editora, String autor, String dataLancamento, int nmrPaginas, int qtdEstoque, double valorVenda) {
+    public Livro (int id, String titulo, String genero, String editora, Pessoa autor, String dataLancamento, int nmrPaginas,
+        int qtdEstoque, double valorVenda) {
         this.id = id;
         this.titulo = titulo;
         this.genero = genero;
@@ -61,14 +61,6 @@ public class Livro {
         this.editora = editora;
     }
 
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
     public String getDataLancamento() {
         return dataLancamento;
     }
@@ -101,30 +93,17 @@ public class Livro {
         this.valorVenda = valorVenda;
     }
 
-    public void vendaLivro(int qtdVenda) {
-        if (qtdVenda >  this.qtdEstoque) {
-            throw new IllegalArgumentException("Quantidade insuficiente para venda.");
-        }
-
-        this.qtdEstoque -= qtdVenda;
-    }
-
-    public double calculaValorVenda(int qtdVenda, double descontoUn) {
-        double valorUn = this.valorVenda - descontoUn;
-    }
-
     @Override
     public String toString() {
-        return "Livro{" +
-                "id=" + id +
-                ", titulo='" + titulo + '\'' +
-                ", genero='" + genero + '\'' +
-                ", editora='" + editora + '\'' +
-                ", autor='" + autor + '\'' +
-                ", dataLancamento='" + dataLancamento + '\'' +
-                ", nmrPaginas=" + nmrPaginas +
-                ", qtdEstoque=" + qtdEstoque +
-                ", valorVenda=" + valorVenda +
-                '}';
+        return "Livro:" + "\n" +
+                "id - " + id + "\n" +
+                "titulo - " + titulo + "\n" +
+                "genero - " + genero + "\n" +
+                "editora - " + editora + "\n" +
+                "dataLancamento - " + dataLancamento + "\n" +
+                "nmrPaginas - " + nmrPaginas + "\n" +
+                "qtdEstoque - " + qtdEstoque + "\n" +
+                "valorVenda - " + valorVenda + "\n" +
+                "autor - " + autor;
     }
 }
