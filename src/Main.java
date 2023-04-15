@@ -40,6 +40,25 @@ public class Main {
         livro2.setNmrPaginas(200);
         livro2.setQtdEstoque(200);
         livro2.setValorVenda(50);
+
+        ArrayList<String> autores3 = new ArrayList<String>();
+        autores1.add("Sandra");
+        autores1.add("Kleber");
+
+        ArrayList<String> generos2 = new ArrayList<String>();
+        generos.add("Infantil");
+        generos.add("Colorir");
+
+        Livro livro3 = new Livro();
+        livro3.setId(3);
+        livro3.setTitulo("Figuras para colorir: CARROS");
+        livro3.setGenero(generos);
+        livro3.setEditora("Library");
+        livro3.setAutores(autores2);
+        livro3.setDataLancamento("2001-03-03");
+        livro3.setNmrPaginas(25);
+        livro3.setQtdEstoque(20);
+        livro3.setValorVenda(15);
         // Fim da criação de livros
 
         // Início da criação de um cliente
@@ -77,9 +96,18 @@ public class Main {
         item2.setValorUnDesconto(1);
         item2.setValorTotal(livro2);
 
+        ItemVenda item3 = new ItemVenda();
+        item3.setId(2);
+        item3.setItem(livro3);
+        item3.setQtdItem(2);
+        item3.setValorUn(livro3.getValorVenda());
+        item3.setValorUnDesconto(2);
+        item3.setValorTotal(livro3);
+
         ArrayList<ItemVenda> itens = new ArrayList<ItemVenda>();
         itens.add(item1);
         itens.add(item2);
+        itens.add(item3);
         // Fim da criação dos itens de uma venda
 
         // Início da criação de formas de pagamento
@@ -91,7 +119,7 @@ public class Main {
         FormaPagamento f2 = new FormaPagamento();
         f2.setId(2);
         f2.setTipoPagamento("Dinheiro");
-        f2.setValorPago(100);
+        f2.setValorPago(200);
 
         ArrayList<FormaPagamento> formasPagemento = new ArrayList<FormaPagamento>();
         formasPagemento.add(f1);
