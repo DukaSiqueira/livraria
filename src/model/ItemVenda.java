@@ -69,13 +69,13 @@ public class ItemVenda {
     }
 
     @Override
-    public toString() {
+    public String toString() {
         return "ItemVenda{" +
                 "id - " + id + "\n" +
                 "item - " + item + "\n" +
                 "quantidade Item - " + qtdItem + "\n" +
                 "valor Unitário - " + valorUn + "\n" +
                 "valor Unitário Desconto - " + valorUnDesconto + "\n" +
-                "valor Total - " + valorTotal + "\n" +;
+                "valor Total - " + valorTotal + "\n";
     }
 }

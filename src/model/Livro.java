@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 public class Livro {
 
     private int id;
@@ -20,7 +22,7 @@ public class Livro {
         this.titulo = titulo;
         this.genero = genero;
         this.editora = editora;
-        this.autor = autor;
+//        this.autor = autor;
         this.dataLancamento = dataLancamento;
         this.nmrPaginas = nmrPaginas;
         this.qtdEstoque = qtdEstoque;
@@ -92,7 +94,7 @@ public class Livro {
     }
 
     @Override
-    public toString() {
+    public String toString() {
         return "Livro: \n" +
                 "id - " + id + "\n" +
                 "titulo - " + titulo + "\n" +
@@ -101,6 +103,6 @@ public class Livro {
                 "data Lançamento - " + dataLancamento + "\n" +
                 "número Páginas - " + nmrPaginas + "\n" +
                 "quantidade Estoque - " + qtdEstoque + "\n" +
-                "valor Venda - " + valorVenda + "\n" +;
+                "valor Venda - " + valorVenda + "\n";
     }
 }

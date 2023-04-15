@@ -1,4 +1,4 @@
-package com.mycompany.trabum.model;
+package model;
 
 public class Estoque {
     

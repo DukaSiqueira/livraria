@@ -1,15 +1,15 @@
 package model;
 
-public class FormaPagto {
+public class FormaPagamento {
 
     private int id;
     private String tipoPagamento;
     private double valorPago;
     private double troco;
 
-    public FormaPagto() {}
+    public FormaPagamento() {}
 
-    public FormaPagto(int id, String tipoPagamento, double valorPago, double troco) {
+    public FormaPagamento(int id, String tipoPagamento, double valorPago, double troco) {
         this.id = id;
         this.tipoPagamento = tipoPagamento;
         this.valorPago = valorPago;
@@ -51,9 +51,9 @@ public class FormaPagto {
     @Override
     public String toString() {
         return "Forma de pagamento {" + "Id: " + id + "\n" +
-                + "Tipo de pagamento: " + tipoPagamento + "\n" +
-                + "Valor pago: " + valorPago + "\n" +
-                + "Troco: " + troco;
+                "Tipo de pagamento: " + tipoPagamento + "\n" +
+                "Valor pago: " + valorPago + "\n" +
+                "Troco: " + troco;
     }
 
 }

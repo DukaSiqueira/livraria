@@ -1,6 +1,8 @@
 package model;
 
 
+import java.util.ArrayList;
+
 public class Venda {
 
     private int id;
@@ -60,12 +62,12 @@ public class Venda {
     }
 
     @Override
-    public toString() {
+    public String toString() {
         return "Venda{" +
                 "id=" + id + "\n" +
                 ", totalVenda=" + totalVenda + "\n" +
                 ", itensVenda=" + itensVenda + "\n" +
                 ", formasPagamento=" + formasPagamento + "\n" +
-                ", cliente=" + cliente + "\n" +;
+                ", cliente=" + cliente + "\n";
     }
 }
