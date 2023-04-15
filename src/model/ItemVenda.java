@@ -64,18 +64,16 @@ public class ItemVenda {
         return valorTotal;
     }
 
-    public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
+    public void setValorTotal(Livro livro) {
+        this.valorTotal = (livro.getValorVenda() - this.valorUnDesconto) * this.qtdItem;
     }
 
     @Override
     public String toString() {
-        return "ItemVenda:" + "\n" +
-                "id - " + id + "\n" +
-                "quantidade Item - " + qtdItem + "\n" +
-                "valor Unitário - " + valorUn + "\n" +
-                "valor Unitário Desconto - " + valorUnDesconto + "\n" +
-                "valor Total - " + valorTotal + "\n" +
-                "item - " + item + "\n";
+        return "Quantidade Item - " + qtdItem + "\n" +
+                "Valor Unitário - " + valorUn + "\n" +
+                "Valor Unitário Desconto - " + valorUnDesconto + "\n" +
+                "Valor Total - " + valorTotal + "\n" +
+                "Item - " + item + "\n";
     }
 }

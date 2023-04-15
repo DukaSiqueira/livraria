@@ -1,28 +1,30 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Livro {
 
     private int id;
     private String titulo;
-    private String genero;
+    private ArrayList<String> genero;
     private String editora;
-    private Pessoa autor;
+    private ArrayList<String> autores;
     private String dataLancamento;
     private int nmrPaginas;
     private int qtdEstoque;
     private double valorVenda;
 
-    public Livro() {}
+    public Livro() {
+    }
 
-    public Livro (int id, String titulo, String genero, String editora, Pessoa autor, String dataLancamento, int nmrPaginas,
-        int qtdEstoque, double valorVenda) {
+    public Livro(int id, String titulo, ArrayList<String> genero, String editora, ArrayList<String> autores, String dataLancamento, int nmrPaginas, int qtdEstoque, double valorVenda) {
         this.id = id;
         this.titulo = titulo;
         this.genero = genero;
         this.editora = editora;
-        this.autor = autor;
+        this.autores = autores;
         this.dataLancamento = dataLancamento;
         this.nmrPaginas = nmrPaginas;
         this.qtdEstoque = qtdEstoque;
@@ -45,11 +47,11 @@ public class Livro {
         this.titulo = titulo;
     }
 
-    public String getGenero() {
+    public ArrayList<String> getGenero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
+    public void setGenero(ArrayList<String> genero) {
         this.genero = genero;
     }
 
@@ -59,6 +61,14 @@ public class Livro {
 
     public void setEditora(String editora) {
         this.editora = editora;
+    }
+
+    public ArrayList<String> getAutores() {
+        return autores;
+    }
+
+    public void setAutores(ArrayList<String> autores) {
+        this.autores = autores;
     }
 
     public String getDataLancamento() {
@@ -93,17 +103,27 @@ public class Livro {
         this.valorVenda = valorVenda;
     }
 
+    public void adicionaEstoque(int qtdAdicionar) {
+        this.qtdEstoque += qtdAdicionar;
+    }
+
+    public void removeEstoque(int qtdRemover) {
+        if (qtdRemover > qtdEstoque) {
+            throw new RuntimeException("Nãp há produtos suficientes para realizar essa venda.");
+        }
+        this.qtdEstoque -= qtdRemover;
+    }
+
     @Override
     public String toString() {
-        return "Livro:" + "\n" +
-                "id - " + id + "\n" +
-                "titulo - " + titulo + "\n" +
-                "genero - " + genero + "\n" +
-                "editora - " + editora + "\n" +
-                "dataLancamento - " + dataLancamento + "\n" +
-                "nmrPaginas - " + nmrPaginas + "\n" +
-                "qtdEstoque - " + qtdEstoque + "\n" +
-                "valorVenda - " + valorVenda + "\n" +
-                "autor - " + autor;
+        return "Livro - " +
+                "Título: " + titulo +
+                " Gênero: " + genero +
+                " Editora: " + editora +
+                " Autores: " + autores +
+                " Data Lancamento: " + dataLancamento +
+                " Total Páginas: " + nmrPaginas +
+                " Em estoque: " + qtdEstoque +
+                " Valor Venda: " + valorVenda + "\n";
     }
 }

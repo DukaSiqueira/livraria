@@ -5,15 +5,13 @@ public class FormaPagamento {
     private int id;
     private String tipoPagamento;
     private double valorPago;
-    private double troco;
 
     public FormaPagamento() {}
 
-    public FormaPagamento(int id, String tipoPagamento, double valorPago, double troco) {
+    public FormaPagamento(int id, String tipoPagamento, double valorPago) {
         this.id = id;
         this.tipoPagamento = tipoPagamento;
         this.valorPago = valorPago;
-        this.troco = troco;
     }
 
     public int getId() {
@@ -28,10 +26,6 @@ public class FormaPagamento {
         return valorPago;
     }
 
-    public double getTroco() {
-        return troco;
-    }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -44,17 +38,9 @@ public class FormaPagamento {
         this.valorPago = valorPago;
     }
 
-    public void setTroco(double troco) {
-        this.troco = troco;
-    }
-
     @Override
     public String toString() {
-        return "Forma de pagamento:" + "\n" +
-                "id - " + id + "\n" +
-                "Tipo de pagamento - " + tipoPagamento + "\n" +
-                "Valor pago - " + valorPago + "\n" +
-                "Troco - " + troco;
+        return "Tipo de pagamento: " + tipoPagamento + "\n" +
+                "Valor pago: " + valorPago + "\n";
     }
-
 }

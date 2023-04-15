@@ -1,15 +1,15 @@
 package model;
 
-public class Pessoa {
+public class Cliente {
 
     private int id;
     private String nome;
     private String telefone;
     private Endereco endereco;
 
-    public Pessoa() {}
+    public Cliente() {}
 
-    public Pessoa(int id, String nome, String telefone, Endereco endereco) {
+    public Cliente(int id, String nome, String telefone, Endereco endereco) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
@@ -20,28 +20,28 @@ public class Pessoa {
         return id;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    public String getTelefone() {
+        return telefone;
+    }
+
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
     }
 
     public void setEndereco(Endereco endereco) {
@@ -50,12 +50,9 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa:" + "\n" +
-                "id - " + id + "\n" +
-                "Nome - " + nome + "\n" +
-                "Telefone - " + telefone + "\n" +
-                "Endereco - " + endereco;
-
+        return "Cliente - " +
+                "Nome:" + nome +
+                " Telefone:" + telefone + "\n" +
+                "Endereço: " + endereco;
     }
-
 }
