@@ -50,10 +50,11 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa {" + "Id da pessoa: " + id + "\n" +
-                "Nome da pessoa: " + nome + "\n" +
-                "Telefone da pessoa: " + telefone + "\n" +
-                "Endereco da pessoa: " + endereco;
+        return "Pessoa:" + "\n" +
+                "id - " + id + "\n" +
+                "Nome - " + nome + "\n" +
+                "Telefone - " + telefone + "\n" +
+                "Endereco - " + endereco;
 
     }
 

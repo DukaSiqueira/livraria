@@ -2,64 +2,73 @@ package model;
 
 public class Endereco {
 
-    private String nmRua;
-    private String nmBairro;
-    private int nmrCasa;
-    private String nmCidade;
-    private String nmEstado;
+    private int id;
+    private String rua;
+    private String numero;
+    private String bairro;
+    private String cidade;
+    private String estado;
     private String pais;
 
-    public Endereco() {
-    }
+    public Endereco() {}
 
-    public Endereco(String nmRua, String nmBairro, int nmrCasa,
-                    String nmCidade, String nmEstado, String pais) {
-        this.nmRua = nmRua;
-        this.nmBairro = nmBairro;
-        this.nmrCasa = nmrCasa;
-        this.nmCidade = nmCidade;
-        this.nmEstado = nmEstado;
+    public Endereco(int id, String rua, String numero, String bairro, String cidade,
+        String estado, String pais) {
+        this.id = id;
+        this.rua = rua;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
         this.pais = pais;
     }
 
-    public String getNmRua() {
-        return nmRua;
+    public int getId() {
+        return id;
     }
 
-    public void setNmrua(String nmRua) {
-        this.nmRua = nmRua;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getNmBairro() {
-        return nmBairro;
+    public String getRua() {
+        return rua;
     }
 
-    public void setNmBairro(String nmBairro) {
-        this.nmBairro = nmBairro;
+    public void setRua(String rua) {
+        this.rua = rua;
     }
 
-    public int getNmrCasa() {
-        return nmrCasa;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setNmrCasa(int nmrCasa) {
-        this.nmrCasa = nmrCasa;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
-    public String getNmCidade() {
-        return nmCidade;
+    public String getBairro() {
+        return bairro;
     }
 
-    public void setNmCidade(String nmCidade) {
-        this.nmCidade = nmCidade;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
-    public String getNmEstado() {
-        return nmEstado;
+    public String getCidade() {
+        return cidade;
     }
 
-    public void setNmEstado(String nmEstado) {
-        this.nmEstado = nmEstado;
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getPais() {
@@ -72,9 +81,12 @@ public class Endereco {
 
     @Override
     public String toString() {
-        return "Endereco{" + "Nome da rua= " + nmRua + ", Nome do Bairro= " + nmBairro + ", Numero da Casa= " + nmrCasa +
-                ", Nome da Cidade= " + nmCidade + ", Nome do Estado= " + nmEstado + ", pais= " + pais + '}';
+        return "id - " + id + "\n" +
+                "rua - " + rua + "\n" +
+                "numero - " + numero + "\n" +
+                "bairro - " + bairro + "\n" +
+                "cidade - " + cidade + "\n" +
+                "estado - " + estado + "\n" +
+                "pais - " + pais + "\n";
     }
-
-
 }

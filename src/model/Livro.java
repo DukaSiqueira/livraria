@@ -8,21 +8,21 @@ public class Livro {
     private String titulo;
     private String genero;
     private String editora;
-//    private Pessoa autor;
-    private Date dataLancamento;
+    private Pessoa autor;
+    private String dataLancamento;
     private int nmrPaginas;
     private int qtdEstoque;
     private double valorVenda;
 
     public Livro() {}
 
-    public Livro (int id, String titulo, String genero, String editora, /*Pessoa autor, */Date dataLancamento, int nmrPaginas,
+    public Livro (int id, String titulo, String genero, String editora, Pessoa autor, String dataLancamento, int nmrPaginas,
         int qtdEstoque, double valorVenda) {
         this.id = id;
         this.titulo = titulo;
         this.genero = genero;
         this.editora = editora;
-//        this.autor = autor;
+        this.autor = autor;
         this.dataLancamento = dataLancamento;
         this.nmrPaginas = nmrPaginas;
         this.qtdEstoque = qtdEstoque;
@@ -61,11 +61,11 @@ public class Livro {
         this.editora = editora;
     }
 
-    public Date getDataLancamento() {
+    public String getDataLancamento() {
         return dataLancamento;
     }
 
-    public void setDataLancamento(Date dataLancamento) {
+    public void setDataLancamento(String dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 
@@ -95,14 +95,15 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Livro: \n" +
+        return "Livro:" + "\n" +
                 "id - " + id + "\n" +
                 "titulo - " + titulo + "\n" +
                 "genero - " + genero + "\n" +
                 "editora - " + editora + "\n" +
-                "data Lançamento - " + dataLancamento + "\n" +
-                "número Páginas - " + nmrPaginas + "\n" +
-                "quantidade Estoque - " + qtdEstoque + "\n" +
-                "valor Venda - " + valorVenda + "\n";
+                "dataLancamento - " + dataLancamento + "\n" +
+                "nmrPaginas - " + nmrPaginas + "\n" +
+                "qtdEstoque - " + qtdEstoque + "\n" +
+                "valorVenda - " + valorVenda + "\n" +
+                "autor - " + autor;
     }
 }

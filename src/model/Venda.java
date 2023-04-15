@@ -63,11 +63,11 @@ public class Venda {
 
     @Override
     public String toString() {
-        return "Venda{" +
-                "id=" + id + "\n" +
-                ", totalVenda=" + totalVenda + "\n" +
-                ", itensVenda=" + itensVenda + "\n" +
-                ", formasPagamento=" + formasPagamento + "\n" +
-                ", cliente=" + cliente + "\n";
+        return "Venda:" +
+                "id - " + id + "\n" +
+                "totalVenda - " + totalVenda + "\n" +
+                "itensVenda - " + itensVenda + "\n" +
+                "formasPagamento - " + formasPagamento + "\n" +
+                "cliente - " + cliente + "\n";
     }
 }

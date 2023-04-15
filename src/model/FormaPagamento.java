@@ -50,10 +50,11 @@ public class FormaPagamento {
 
     @Override
     public String toString() {
-        return "Forma de pagamento {" + "Id: " + id + "\n" +
-                "Tipo de pagamento: " + tipoPagamento + "\n" +
-                "Valor pago: " + valorPago + "\n" +
-                "Troco: " + troco;
+        return "Forma de pagamento:" + "\n" +
+                "id - " + id + "\n" +
+                "Tipo de pagamento - " + tipoPagamento + "\n" +
+                "Valor pago - " + valorPago + "\n" +
+                "Troco - " + troco;
     }
 
 }
