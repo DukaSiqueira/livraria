@@ -1,103 +1,93 @@
-package com.mycompany.trabum.model;
+package model;
 
 public class Livro {
-    
-    //ATRIBUTOS
-    private String nmLivro;
-    private String nmEditora;
-    private String autores;
-    private String gnrLivro;
-    private int anoLanc; 
-    private int vlrLivro;
-    private int nmrPag;
-    private Estoque Estoque;
-    
-    //CONSTRUTORES
-    public Livro(){
-        
-    }
-    
-    public Livro(String nmLivro, String nmEditora, String autores, String gnrLivro,
-    int anoLanc, int vlrLivro, int nmrPag, Estoque Estoque){
-        this.nmLivro = nmLivro;
-        this.nmEditora = nmEditora;
-        this.autores = autores;
-        this.gnrLivro = gnrLivro;
-        this.anoLanc = anoLanc;
-        this.vlrLivro = vlrLivro;
-        this.nmrPag = nmrPag;
-        this.Estoque = Estoque;
+
+    private int id;
+    private String titulo;
+    private String genero;
+    private String editora;
+//    private Pessoa autor;
+    private Date dataLancamento;
+    private int nmrPaginas;
+    private int qtdEstoque;
+    private double valorVenda;
+
+    public Livro() {}
+
+    public Livro (int id, String titulo, String genero, String editora, /*Pessoa autor, */Date dataLancamento, int nmrPaginas,
+        int qtdEstoque, double valorVenda) {
+        this.id = id;
+        this.titulo = titulo;
+        this.genero = genero;
+        this.editora = editora;
+        this.autor = autor;
+        this.dataLancamento = dataLancamento;
+        this.nmrPaginas = nmrPaginas;
+        this.qtdEstoque = qtdEstoque;
+        this.valorVenda = valorVenda;
     }
 
-    //GET E SETTERS
-    public String getNmLivro() {
-        return nmLivro;
+    public int getId() {
+        return id;
     }
 
-    public void setNmLivro(String nmLivro) {
-        this.nmLivro = nmLivro;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getNmEditora() {
-        return nmEditora;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setNmEditora(String nmEditora) {
-        this.nmEditora = nmEditora;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getAutores() {
-        return autores;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setAutores(String autores) {
-        this.autores = autores;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
-    public String getGnrLivro() {
-        return gnrLivro;
+    public String getEditora() {
+        return editora;
     }
 
-    public void setGnrLivro(String gnrLivro) {
-        this.gnrLivro = gnrLivro;
+    public void setEditora(String editora) {
+        this.editora = editora;
     }
 
-    public int getAnoLanc() {
-        return anoLanc;
+    public Date getDataLancamento() {
+        return dataLancamento;
     }
 
-    public void setAnoLanc(int anoLanc) {
-        this.anoLanc = anoLanc;
+    public void setDataLancamento(Date dataLancamento) {
+        this.dataLancamento = dataLancamento;
     }
 
-    public int getVlrLivro() {
-        return vlrLivro;
+    public int getNmrPaginas() {
+        return nmrPaginas;
     }
 
-    public void setVlrLivro(int vlrLivro) {
-        this.vlrLivro = vlrLivro;
+    public void setNmrPaginas(int nmrPaginas) {
+        this.nmrPaginas = nmrPaginas;
     }
 
-    public int getNmrPag() {
-        return nmrPag;
+    public int getQtdEstoque() {
+        return qtdEstoque;
     }
 
-    public void setNmrPag(int nmrPag) {
-        this.nmrPag = nmrPag;
+    public void setQtdEstoque(int qtdEstoque) {
+        this.qtdEstoque = qtdEstoque;
     }
 
-    public Estoque getEstoque() {
-        return Estoque;
+    public double getValorVenda() {
+        return valorVenda;
     }
 
-    public void setEstoque(Estoque Estoque) {
-        this.Estoque = Estoque;
+    public void setValorVenda(double valorVenda) {
+        this.valorVenda = valorVenda;
     }
-
-    @Override
-    public String toString() {
-        return "Livro{" + "nmLivro=" + nmLivro + ", nmEditora=" + nmEditora + ", autores=" + autores + ", gnrLivro=" + gnrLivro + ", anoLanc=" + anoLanc + ", vlrLivro=" + vlrLivro + ", nmrPag=" + nmrPag + ", Estoque=" + Estoque + '}';
-    }
-    
-    
 }
