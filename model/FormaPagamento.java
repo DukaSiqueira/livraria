@@ -1,61 +1,59 @@
-package com.mycompany.trabum.model;
+package model;
 
 public class FormaPagto {
 
-    private String ctDebito;
-    private String ctCredito;
-    private String avista;
-    private String pix;
+    private int id;
+    private String tipoPagamento;
+    private double valorPago;
+    private double troco;
 
-    public FormaPagto() {
+    public FormaPagto() {}
+
+    public FormaPagto(int id, String tipoPagamento, double valorPago, double troco) {
+        this.id = id;
+        this.tipoPagamento = tipoPagamento;
+        this.valorPago = valorPago;
+        this.troco = troco;
     }
 
-    public FormaPagto(String ctDebito, String ctCredito, String avista,
-                      String pix) {
-        this.ctDebito = ctDebito;
-        this.ctCredito = ctCredito;
-        this.avista = avista;
-        this.pix = pix;
+    public int getId() {
+        return id;
     }
 
-
-    public String getCtDebito() {
-        return ctDebito;
+    public String getTipoPagamento() {
+        return tipoPagamento;
     }
 
-    public void setCtDebito(String ctDebito) {
-        this.ctDebito = ctDebito;
+    public double getValorPago() {
+        return valorPago;
     }
 
-    public String getCtCredito() {
-        return ctCredito;
+    public double getTroco() {
+        return troco;
     }
 
-    public void setCtCredito(String ctCredito) {
-        this.ctCredito = ctCredito;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getAvista() {
-        return avista;
+    public void setTipoPagamento(String tipoPagamento) {
+        this.tipoPagamento = tipoPagamento;
     }
 
-    public void setAvista(String avista) {
-        this.avista = avista;
+    public void setValorPago(double valorPago) {
+        this.valorPago = valorPago;
     }
 
-    public String getPix() {
-        return pix;
-    }
-
-
-    public void setPix(String pix) {
-        this.pix = pix;
+    public void setTroco(double troco) {
+        this.troco = troco;
     }
 
     @Override
     public String toString() {
-        return "FormaPagto{" + "ctDebito=" + ctDebito + ", ctCredito=" + ctCredito +
-                ", avista=" + avista + ", pix=" + pix + '}';
+        return "Forma de pagamento {" + "Id: " + id + "\n" +
+                + "Tipo de pagamento: " + tipoPagamento + "\n" +
+                + "Valor pago: " + valorPago + "\n" +
+                + "Troco: " + troco;
     }
 
 }
